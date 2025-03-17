@@ -1,0 +1,41 @@
+.counter-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+  }
+  
+  .button-group {
+    margin-bottom: 10px;
+  }
+
+  .text-size {
+    font-size: 22px;
+  }
+  
+  button {
+    margin: 5px;
+    background-color: blue;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .reset-button {
+    display: block;
+    margin: 10px auto;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+  }
+  
+  .nav-buttons {
+    margin-top: 20px;
+  }
+  
+  .nav-buttons button {
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+  

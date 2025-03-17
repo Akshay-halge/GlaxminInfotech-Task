@@ -1,0 +1,37 @@
+
+
+  <div class="container">
+    <div class="nav-buttons">
+        <button (click)="goBack()">Back</button>
+        <button (click)="goToEmicalculator()">Next</button>
+      </div>    
+    <h2>Todo Transfer App</h2>
+    
+    <div class="lists-container">
+      <!-- First List -->
+      <div class="list">
+        <h3>List 1</h3>
+        <ul>
+          <li *ngFor="let item of firstlistItems; let i = index">
+            <strong>ID:</strong> {{ item.id }} | <strong>Todo:</strong> {{ item.todo }}
+            <button (click)="transferItem(i)">Transfer ➡️</button>
+          </li>
+        </ul>
+        <button class="hold" (click)="transferAll()">Hold All ➡️</button>
+      </div>
+  
+      <!-- Second List -->
+      <div class="list">
+        <h3>List 2</h3>
+        <ul>
+          <li *ngFor="let item of secondlistItems; let i = index">
+            <strong>ID:</strong> {{ item.id }} | <strong>Todo:</strong> {{ item.todo }}
+            <button (click)="reverseItem(i)">⬅️ Reverse</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <button class="reset" (click)="resetAll()">🔄 Reset</button>
+  </div>
+  

@@ -1,0 +1,55 @@
+<!-- <div class="emi-container">
+    <div class="nav-buttons">
+        <button (click)="goBackItemlists()">Back</button>
+      </div>    
+    <h2>EMI Calculator</h2>
+  
+    <div class="input-group">
+      <label>Loan Amount (₹):</label>
+      <input type="number" [(ngModel)]="loanAmount" (input)="calculateEMI()" />
+    </div>
+  
+    <div class="input-group">
+      <label>Interest Rate (% per year):</label>
+      <input type="number" [(ngModel)]="interestRate" (input)="calculateEMI()" />
+    </div>
+  
+    <div class="input-group">
+      <label>Loan Term (Years):</label>
+      <input type="number" [(ngModel)]="loanTerm" (input)="calculateEMI()" />
+    </div>
+  
+    <div class="result" *ngIf="emi !== null">
+      <h3>Monthly EMI: ₹{{ emi.toFixed(2) }}</h3>
+    </div>
+  </div>
+   -->
+
+   <div class="emi-container">
+    <div class="nav-buttons">
+        <button (click)="goBackItemlists()">Back</button>
+      </div>    
+    <h2>📊 EMI Calculator</h2>
+  
+    <div class="input-group">
+      <label>🏦 Loan Amount (₹):</label>
+      <input type="number" [(ngModel)]="loanAmount" (input)="validateInput()" min="0" />
+    </div>
+  
+    <div class="input-group">
+      <label>💰 Interest Rate (% per year):</label>
+      <input type="number" [(ngModel)]="interestRate" (input)="validateInput()" min="0" />
+    </div>
+  
+    <div class="input-group">
+      <label>📅 Loan Term (Years):</label>
+      <input type="number" [(ngModel)]="loanTerm" (input)="validateInput()" min="0" />
+    </div>
+  
+    <button class="calculate-btn" (click)="calculateEMI()">Calculate EMI</button>
+  
+    <div class="result" *ngIf="emi !== null">
+      <h3>💳 Monthly EMI: ₹{{ emi.toFixed(2) }}</h3>
+    </div>
+  </div>
+  
