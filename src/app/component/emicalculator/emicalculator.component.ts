@@ -8,24 +8,6 @@ import { Router } from '@angular/router';
 })
 export class EmicalculatorComponent {
   constructor(private router:Router){}
-  // loanAmount: number = 100000; // Default Value
-  // interestRate: number = 5; // Default Value in %
-  // loanTerm: number = 5; // Default Value in Years
-  // emi: number | null = null;
-
-  // calculateEMI() {
-  //   const P = this.loanAmount; // Principal Loan Amount
-  //   const r = this.interestRate / 100 / 12; // Monthly Interest Rate
-  //   const n = this.loanTerm * 12; // Total Months
-
-  //   if (P > 0 && r > 0 && n > 0) {
-  //     this.emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-  //   } else {
-  //     this.emi = null; // Handle invalid cases
-  //   }
-  // }
-
-  /////
 
   loanAmount: number = 100000;
   interestRate: number = 5;

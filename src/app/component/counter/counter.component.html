@@ -1,17 +1,16 @@
-
+<app-navbar></app-navbar>
 <div class="counter-container">
 
     <div class="nav-buttons">
         <button (click)="goToItemList()">Next</button>
-      </div>    
-    
+    </div>
+
     <h1>Counter example</h1>
     <p class="text-size">{{ count }}</p>
-    
+
     <div class="button-group">
-        <button (click)="increment()" >+1</button>
-        <button (click)="decrement()">-1</button>
+        <button (click)="increment()">+1</button>
+        <button (click)="decrement()" [disabled]="count === 0">-1</button>
     </div>
     <button class="reset-button" (click)="reset()">Reset</button>
-  </div>
-  
+</div>

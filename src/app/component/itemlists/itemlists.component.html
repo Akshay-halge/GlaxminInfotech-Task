@@ -1,14 +1,12 @@
 
-
+<app-navbar></app-navbar>
   <div class="container">
     <div class="nav-buttons">
         <button (click)="goBack()">Back</button>
         <button (click)="goToEmicalculator()">Next</button>
       </div>    
     <h2>Todo Transfer App</h2>
-    
     <div class="lists-container">
-      <!-- First List -->
       <div class="list">
         <h3>List 1</h3>
         <ul>
@@ -17,10 +15,8 @@
             <button (click)="transferItem(i)">Transfer ➡️</button>
           </li>
         </ul>
-        <button class="hold" (click)="transferAll()">Hold All ➡️</button>
+        <button class="hold" *ngIf="firstlistItems.length > 0" (click)="transferAll()">Hold All ➡️</button>
       </div>
-  
-      <!-- Second List -->
       <div class="list">
         <h3>List 2</h3>
         <ul>
@@ -29,6 +25,7 @@
             <button (click)="reverseItem(i)">⬅️ Reverse</button>
           </li>
         </ul>
+        <button class="hold" *ngIf="secondlistItems.length > 0" (click)="reverseAll()">⬅️ Reverse Hold All</button>
       </div>
     </div>
   

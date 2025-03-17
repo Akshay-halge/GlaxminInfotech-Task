@@ -8,6 +8,7 @@ import { ItemlistsComponent } from './component/itemlists/itemlists.component';
 import { EmicalculatorComponent } from './component/emicalculator/emicalculator.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     CounterComponent,
     ItemlistsComponent,
     EmicalculatorComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

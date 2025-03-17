@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { Todo } from 'src/app/models/todo';
 import { MainService } from 'src/app/service/main.service';
 
 @Component({
@@ -9,9 +10,9 @@ import { MainService } from 'src/app/service/main.service';
 })
 export class ItemlistsComponent implements OnInit {
 
-  firstlistItems: any[] = [];  // Original List
-  secondlistItems: any[] = [];  // Transferred List
-  originalListItems: any[] = []; // To store original data for reset
+  firstlistItems: Todo[] = [];  // Original List
+  secondlistItems: Todo[] = [];  // Transferred List
+  originalListItems: Todo[] = []; // To store original data for reset
 
 
   constructor(private router:Router, private mainService:MainService){
@@ -54,6 +55,12 @@ export class ItemlistsComponent implements OnInit {
     this.firstlistItems.push(this.secondlistItems[index]);
     this.secondlistItems.splice(index, 1);
   }
+
+  reverseAll() {
+    this.firstlistItems.push(...this.secondlistItems); // Move all items back
+    this.secondlistItems = []; // Clear second list
+  }
+  
 
   resetAll() {
     this.firstlistItems = [...this.originalListItems]; // Restore original data

@@ -24,8 +24,8 @@ export class CounterComponent {
   }
 
 
-  goToItemList() {
-    this.router.navigate(['/itemlists']); // Navigates to item list view
+  goToItemList() { // Navigates to item list view
+    this.router.navigate(['/itemlists']);
   }
 
 
